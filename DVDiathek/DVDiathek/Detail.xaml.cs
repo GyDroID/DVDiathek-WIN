@@ -18,18 +18,13 @@ namespace DVDiathek
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Detail : Window 
     {
-        private List<MediaListControl> mediaListControls = new List<MediaListControl>();
 
 
-        public MainWindow()
+        public Detail()
         {
             InitializeComponent();
-            DataContext = new ComboBoxViewModel();
-            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = "Zoomania.jpg" });
-            //MediaList.ItemsSource = mediaListControls;
-            //MediaList.DataContext = mediaListControls;
         }
 
         private void Menu_Click(object sender, RoutedEventArgs e)
@@ -37,12 +32,7 @@ namespace DVDiathek
 
         }
 
-        private void ChangeLayout_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnBack_Click(object sender, RoutedEventArgs e)
         {
 
         }
