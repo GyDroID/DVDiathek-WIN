@@ -22,12 +22,10 @@ namespace DVDiathek
     {
         private List<MediaListControl> mediaListControls = new List<MediaListControl>();
 
-
         public MainWindow()
         {
             InitializeComponent();
             DataContext = new ComboBoxViewModel();
-<<<<<<< HEAD
             mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
             mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
             mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
@@ -43,33 +41,15 @@ namespace DVDiathek
             mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
             mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Forrest Gump", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\ForrestGump.jpg" });
             MediaList.ItemsSource = mediaListControls;
-=======
-            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = "Zoomania.jpg" });
-            //MediaList.ItemsSource = mediaListControls;
-<<<<<<< HEAD
->>>>>>> aad3fd8fa79a2320ee9b5e8a7c4808d95454cf85
             //MediaList.DataContext = mediaListControls;
         }
 
         private void btnChangeLayout_Click(object sender, RoutedEventArgs e)
         {
 
-=======
-            //MediaList.DataContext = mediaListControls;
->>>>>>> aad3fd8fa79a2320ee9b5e8a7c4808d95454cf85
         }
 
         private void btnMenu_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }
