@@ -5,67 +5,68 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DVDiathek"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="650">
+
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <ToolBarPanel Grid.Row="0" Orientation="Horizontal" Grid.ColumnSpan="2" HorizontalAlignment="Center" >
-                <Button Name="btnMenu" 
-                        Click="Menu_Click" 
+            <StackPanel Grid.Row="0" Grid.Column="0" Margin="10">
+                <ToolBarPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Name="btnMenu" 
+                        Click="btnMenu_Click" 
                         Content="Menü" 
                         Width="50" 
                         Margin="0,10,0,10" />
 
-                <ComboBox Name="cbMediaSection" 
+                    <ComboBox Name="cbMediaSection" 
                           MinWidth="180" 
                           Width="Auto" 
                           IsReadOnly="True" 
                           Margin="10,10,10,10"  
                           ItemsSource="{Binding MediaSection}"/>
 
-                <TextBox Name="tbSearch" 
+                    <TextBox Name="tbSearch" 
                          MinWidth="180"
                          Width="Auto"
                          IsEnabled="True" 
                          IsReadOnly="False" 
                          Margin="10,10,10,10"/>
 
-                <Button Name="btnChangeLayout"
-                        Click="ChangeLayout_Click" 
+                    <Button Name="btnChangeLayout"
+                        Click="btnChangeLayout_Click" 
                         Width="50" 
                         Content="Layout"
                         Margin="10,10,10,10"
                         HorizontalAlignment="Right"/>
-            </ToolBarPanel>
-            <ListView Name="ExcelInhalt" VerticalAlignment="Top" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" ItemsSource="{Binding}" >
-                <ListView.View>
-                    <GridView >
-                        <GridView.Columns>
-                            <GridViewColumn Header="Übernahme">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <CheckBox IsChecked="{Binding Path=Transfer}" />
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                            <GridViewColumn Header="MFO" DisplayMemberBinding="{Binding Path=MFOIDE}" />
-                            <GridViewColumn Header="Datum" DisplayMemberBinding="{Binding Path=TRADAT, StringFormat=d}" />
-                            <GridViewColumn Header="Lager" DisplayMemberBinding="{Binding Path=ITMLOC}" />
-                            <GridViewColumn Header="Bezeichnung" DisplayMemberBinding="{Binding Path=ITMTXT}" />
-                            <GridViewColumn Header="Artikel" DisplayMemberBinding="{Binding Path=ITMNUM}" />
-                            <GridViewColumn Header="Meldung" DisplayMemberBinding="{Binding Path=Message}" Width="250"/>
-                        </GridView.Columns>
-                    </GridView>
-                </ListView.View>
-            </ListView>
+                </ToolBarPanel>
+            </StackPanel>
+            <!--<ContentControl Name="MediaList" Content="{Binding MediaList}" Grid.Row="1" Grid.Column="0"/>-->
+            <ListBox Grid.Row="1" Grid.Column="0" Name="MediaList" Margin="10" SelectionMode="Single" BorderBrush="Bisque">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Image Source="{Binding Path=MediaImage}" Grid.Row="0" Grid.Column="0" MaxHeight="100" MaxWidth="100"/>
+                            <StackPanel Grid.Row="0" Grid.Column="1">
+                                <Label Content="{Binding Path=MediaTitle}"/>
+                                <Label Content="{Binding Path=MediaDetail}"/>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </Grid>
     </Grid>
 </Window>

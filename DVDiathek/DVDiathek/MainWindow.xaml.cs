@@ -20,18 +20,36 @@ namespace DVDiathek
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<MediaListControl> mediaListControls = new List<MediaListControl>();
+
         public MainWindow()
         {
             InitializeComponent();
             DataContext = new ComboBoxViewModel();
+            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
+            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
+            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
+            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
+            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
+            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
+            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
+            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
+            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
+            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
+            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
+            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
+            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Zoomania", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\Zoomania.jpg" });
+            mediaListControls.Add(new MediaListControl() { Index = 1, MediaTitle = "Forrest Gump", MediaDetail = "Testbeschreibung", MediaImage = @"\Image\ForrestGump.jpg" });
+            MediaList.ItemsSource = mediaListControls;
+            //MediaList.DataContext = mediaListControls;
         }
 
-        private void Menu_Click(object sender, RoutedEventArgs e)
+        private void btnChangeLayout_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void ChangeLayout_Click(object sender, RoutedEventArgs e)
+        private void btnMenu_Click(object sender, RoutedEventArgs e)
         {
 
         }
