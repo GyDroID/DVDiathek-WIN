@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿<Window x:Class="DVDiathek.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -54,11 +55,54 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
 >>>>>>> aad3fd8fa79a2320ee9b5e8a7c4808d95454cf85
+=======
+﻿<Window
+    x:Class="DVDiathek.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DVDiathek"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type Binding}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Image
+                    Name="imgMediaImage"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="10" />
+                <StackPanel Grid.Row="0" Grid.Column="1">
+                    <Label Name="txtMediaTitle" Content="{Binding MediaTitle}" />
+                    <Label Name="txtMediaDetail" Content="{Binding MediaDetail}" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid Background="DarkBlue">
+        <Grid Background="Beige">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+>>>>>>> aad3fd8fa79a2320ee9b5e8a7c4808d95454cf85
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <StackPanel Grid.Row="0" Grid.Column="0" Margin="10">
                 <ToolBarPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -68,6 +112,8 @@
                         Width="50" 
                         Margin="0,10,0,10" />
 =======
+=======
+>>>>>>> aad3fd8fa79a2320ee9b5e8a7c4808d95454cf85
             <StackPanel Grid.Row="0" Grid.ColumnSpan="3">
                 <ToolBarPanel HorizontalAlignment="Center" Orientation="Horizontal">
                     <Button
@@ -76,6 +122,9 @@
                         Margin="0,10,0,10"
                         Click="Menu_Click"
                         Content="Menü" />
+<<<<<<< HEAD
+>>>>>>> aad3fd8fa79a2320ee9b5e8a7c4808d95454cf85
+=======
 >>>>>>> aad3fd8fa79a2320ee9b5e8a7c4808d95454cf85
 
                     <ComboBox
@@ -95,10 +144,16 @@
                         IsReadOnly="False" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <Button Name="btnChangeLayout"
                         Click="btnChangeLayout_Click" 
                         Width="50" 
                         Content="Layout"
+=======
+                    <Button
+                        Name="btnChangeLayout"
+                        Width="50"
+>>>>>>> aad3fd8fa79a2320ee9b5e8a7c4808d95454cf85
 =======
                     <Button
                         Name="btnChangeLayout"
@@ -110,6 +165,7 @@
                         Content="Layout" />
                 </ToolBarPanel>
             </StackPanel>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <!--<ContentControl Name="MediaList" Content="{Binding MediaList}" Grid.Row="1" Grid.Column="0"/>-->
             <ListBox Grid.Row="1" Grid.Column="0" Name="MediaList" Margin="10" SelectionMode="Single" BorderBrush="Bisque">
@@ -133,6 +189,8 @@
                 </ListBox.ItemTemplate>
             </ListBox>
 =======
+=======
+>>>>>>> aad3fd8fa79a2320ee9b5e8a7c4808d95454cf85
             <ListBox
                 Grid.Row="1"
                 Grid.ColumnSpan="3"
