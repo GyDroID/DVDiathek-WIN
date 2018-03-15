@@ -9,7 +9,7 @@
     Width="600"
     Height="600"
     mc:Ignorable="d">
-    <Grid>
+    <Grid Background="#FCFFF5">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -22,23 +22,40 @@
         <Image
             Name="imgBar"
             Grid.Row="0"
-            Grid.Column="0"
             Source="{Binding Path=imgBar}" />
-        <WrapPanel Grid.Row="1" Grid.Column="0">
+        <WrapPanel Grid.Row="1" Background="#D1DBBD">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
+                    <RowDefinition />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="20*" />
+                    <ColumnDefinition Width="40*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Image
                     Name="imgCover"
+                    Grid.RowSpan="2"
                     Grid.Column="0"
-                    Source="{Binding Path=imgCover}" />
+                    Source="Zoomania.jpg"
+                    Margin="10,0,10,10"
+                    Width="Auto"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"/>
+                <StackPanel Grid.Column="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="20*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="50*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Name="lbTitle" Content="Titel" Grid.Row="0" Grid.Column="0"/>
+                    </Grid>
+                </StackPanel>
             </Grid>
         </WrapPanel>
     </Grid>
