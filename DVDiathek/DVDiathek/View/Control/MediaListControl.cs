@@ -14,5 +14,7 @@ namespace DVDiathek
         public string MediaTitle { get; set; }
         public string MediaDetail { get; set; }
         public string MediaImage { get; set; }
+
+        
     }
 }
